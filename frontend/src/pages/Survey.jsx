@@ -28,7 +28,7 @@ export default function Survey() {
     }
     setLoading(true);
     try {
-      const res = await axios.post("http://localhost:5000/predict", { symptoms: selected });
+      const res = await axios.post("https://your-render-url.onrender.com/predict", { symptoms: selected });
       navigate("/results", { state: res.data });
     } catch (err) {
       alert("Error connecting to AI server. Make sure Flask is running!");
