@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #FDF6EC;
+  color: #3B2A1A;
+}
+
+/* ── Buttons ── */
+.btn-primary {
+  background: linear-gradient(135deg, #A0522D, #8B4513);
+  color: white;
+  padding: 13px 28px;
+  border: none;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 4px 15px rgba(160, 82, 45, 0.3);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #8B4513, #6B3A1F);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(160, 82, 45, 0.4);
+}
+
+.btn-primary:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ── Cards ── */
+.card {
+  background: white;
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 24px rgba(160, 82, 45, 0.08);
+  border: 1px solid #F5E6C8;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(160, 82, 45, 0.14);
+}
+
+/* ── Tags ── */
+.tag {
+  background: linear-gradient(135deg, #F5E6C8, #EDD9B0);
+  color: #6B3A1F;
+  padding: 5px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.herb-tag {
+  background: linear-gradient(135deg, #EAF3DE, #D4EDBA);
+  color: #27500A;
+  border: 1px solid #97C459;
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* ── Page Layout ── */
+.page-container {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #FDF6EC 0%, #FFF8F0 100%);
+}
+
+.page-content {
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.page-header .emoji {
+  font-size: 52px;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.page-header h2 {
+  font-family: 'Lora', serif;
+  font-size: 26px;
+  color: #6B3A1F;
+  margin-bottom: 8px;
+}
+
+.page-header p {
+  color: #8B6347;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #FDF6EC; }
+::-webkit-scrollbar-thumb { background: #C49A6C; border-radius: 10px; }
+
+/* ── Inputs ── */
+input, textarea, button {
+  font-family: 'Poppins', sans-serif;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #A0522D !important;
+  box-shadow: 0 0 0 3px rgba(160, 82, 45, 0.1);
+}
+
+/* ── Animations ── */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.card {
+  animation: fadeIn 0.3s ease;
+}
