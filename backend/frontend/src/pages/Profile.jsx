@@ -3,7 +3,6 @@ import { auth, db } from "../firebase/config";
 import { useNavigate } from "react-router-dom";
 import { collection, query, where, getDocs, deleteDoc, doc } from "firebase/firestore";
 import Navbar from "../components/Navbar";
-
 export default function Profile() {
   const user = auth.currentUser;
   const navigate = useNavigate();
